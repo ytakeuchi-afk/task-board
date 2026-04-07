@@ -6,6 +6,33 @@
 
 タスクボードアプリケーション。
 
+## デプロイ先
+
+https://ytakeuchi-afk.github.io/task-board/
+
+- ホスティング: GitHub Pages
+- デプロイ方法: `main` ブランチへのプッシュで GitHub Actions が自動ビルド・デプロイ
+- ワークフロー: [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
+
+## 技術スタック
+
+| カテゴリ | 技術 |
+|---|---|
+| UIライブラリ | React 18 |
+| ビルドツール | Vite 6 |
+| スタイリング | CSS Modules |
+| 状態管理 | React useState / useEffect（ライブラリなし） |
+| 永続化 | localStorage |
+| パッケージマネージャー | npm |
+
+## コンポーネント命名規約
+
+- **ファイル名**: PascalCase（例: `TaskItem.jsx`, `App.jsx`）
+- **CSSモジュール**: コンポーネントと同名の `.module.css`（例: `App.module.css`）
+- **コンポーネント関数**: PascalCase の名前付き関数でエクスポート（`export default function App()`）
+- **フック・ハンドラ**: camelCase（例: `handleKeyDown`, `addTask`, `toggleTask`）
+- **定数**: UPPER_SNAKE_CASE（例: `STORAGE_KEY`）
+
 ## Git 運用ルール
 
 **コードを変更するたびに、必ずGitHubにプッシュすること。**
